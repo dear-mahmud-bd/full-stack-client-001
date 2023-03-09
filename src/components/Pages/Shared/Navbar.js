@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import Navlogo from '../../assetes/navLogo.webp';
 
 const Navbar = () => {
+    const menuItems = <>
+        <li><Link to="home">Home</Link></li>
+        <li><Link to="products">Products</Link></li>
+        <li><Link to="reviews">Reviews</Link></li>
+        <li><Link to="blogs">Blogs</Link></li>
+    </>
     return (
         <div className='bg-base-300 drop-shadow-sm hover:drop-shadow-lg'>
             <div className="navbar md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto">
@@ -12,18 +18,14 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><Link to="home">Home</Link></li>
-                            <li><Link to="products">Products</Link></li>
-                            <li><Link to="reviews">Reviews</Link></li>
+                            {menuItems}
                         </ul>
                     </div>
                     <Link to="/"><img className='h-10 cursor-pointer' src={Navlogo} alt='' /></Link>
                 </div>
                 <div className="navbar-center hidden md:flex">
                     <ul className="menu menu-horizontal p-0">
-                        <li><Link to="home">Home</Link></li>
-                        <li><Link to="products">Products</Link></li>
-                        <li><Link to="reviews">Reviews</Link></li>
+                        {menuItems}
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -38,7 +40,7 @@ const Navbar = () => {
                         <ul tabIndex={0} className="mt-3 p-2 shadow-lg menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                             <li><Link to="/">Profile</Link></li>
                             <li><Link to="/">Dashboard</Link></li>
-                            <li><Link to="/" className='btn btn-ghost'>Log out</Link></li>
+                            <li><Link to="login" className='btn btn-ghost'>Log In</Link></li>
                         </ul>
                     </div>
                 </div>
