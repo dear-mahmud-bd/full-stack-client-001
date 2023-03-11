@@ -14,7 +14,7 @@ const Carusel = () => {
                 </div>
                 <div className="mt-5 sm:mb-10 md:mb-15 lg:mb-20 flex justify-center ">
                     <span className="p-3  border-2 border-gray-200 rounded-md text-base hover:bg-gray-200 hover:border-gray-200 cursor-pointer hover:text-black ">
-                        <Link to="/products">Our Collection</Link>
+                        <Link to="/all-products">Our Collection</Link>
                     </span>
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServiceDetails = ({service}) => {
     return (
-        <div className="card lg:max-w-lg bg-base-100 shadow-xl">
+        <div className="card lg:max-w-lg bg-base-100 shadow-md hover:drop-shadow-2xl duration-500 cursor-pointer">
             <figure className="px-10 pt-10">
                 <p className='text-8xl'>{service.img}</p>
             </figure>

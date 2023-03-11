@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import Blogs from './components/Pages/Home/Blogs/Blogs';
 import Home from './components/Pages/Home/Home/Home';
-import Products from './components/Pages/Home/Products/Products';
-import Reviews from './components/Pages/Home/Reviews/Reviews';
+import Reviews from './components/Pages/Reviews/Reviews';
+import Blogs from './components/Pages/Blogs/Blogs';
 import Login from './components/Pages/LogIn/Login';
 import Footer from './components/Pages/Shared/Footer';
 import Navbar from './components/Pages/Shared/Navbar';
+import AllProduct from './components/Pages/Products/AllProducts';
+import NotFound from './components/Pages/Shared/NotFound';
 
 function App() {
   return (
@@ -15,10 +16,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
-          <Route path="products" element={<Products />} />
+          <Route path="all-products" element={<AllProduct />} />
           <Route path="reviews" element={<Reviews />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </section>
       <Footer/>
