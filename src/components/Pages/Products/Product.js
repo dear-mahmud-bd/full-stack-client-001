@@ -15,7 +15,7 @@ const Product = ({ product }) => {
                 <p className=" text-center m-2 text-sm">{product.description}</p>
                 <div className='w-full flex items-center justify-between px-2'>
                     <div>
-                        <p className='text-[12px] lg:text-sm text-lighttextGray font-semibold mt-1 font-medium text-gray-500 flex items-center gap-2 ml-auto'>
+                        <p className='text-[12px] lg:text-sm mt-1 font-semibold text-gray-500 flex items-center gap-2 ml-auto'>
                             <span className='text-sky-600 text-2xl font-semibold'><MdProductionQuantityLimits /></span>
                             <span>Minimum Order: <br />{product.minorder} piece</span>
                         </p>
